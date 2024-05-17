@@ -32,7 +32,6 @@ void main() {
 
       final factory1 = find.byKey(Key('factory1'));
       final factory2 = find.byKey(Key('factory2'));
-      final factory3 = find.byKey(Key('factory3'));
 
       expect(find.byKey(Key('factory1')), findsOneWidget);
       expect(find.byKey(Key('factory2')), findsOneWidget);
@@ -43,13 +42,6 @@ void main() {
 
       await tester.tap(factory2);
       await tester.pumpAndSettle();
-
-      // await tester.drag(
-      //     find.byType(SingleChildScrollView), const Offset(-300, 0));
-      // await tester.pump();
-
-      // await tester.tap(factory3);
-      // await tester.pumpAndSettle();
 
       final personButton = find.byKey(Key('person'));
       await tester.tap(personButton);
