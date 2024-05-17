@@ -70,7 +70,6 @@ void main() {
       final settingsButton = find.byKey(Key('settings'));
       await tester.tap(settingsButton);
       await tester.pumpAndSettle();
-      
     });
   });
 }
