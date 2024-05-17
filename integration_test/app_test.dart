@@ -5,8 +5,8 @@ import 'package:sse3401_lab5/main.dart' as app;
 
 void main() {
   group('app test', () {
+    IntegrationTestWidgetsFlutterBinding.ensureInitialized();
     testWidgets('full app test', (tester) async {
-      IntegrationTestWidgetsFlutterBinding.ensureInitialized();
       app.main();
       await tester.pumpAndSettle();
 
